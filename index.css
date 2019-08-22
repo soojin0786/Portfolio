@@ -1,63 +1,230 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-image: linear-gradient(to right, white, #00797C, white);
+  position: relative;
+  top: 40px;
+}  
+
+ul.navigation {
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: left;
+  padding-left: 8%;
+  font-size: 38px;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: bolder;
+  color: #115E67;
+}
+
+.aboutMe {
+  text-align: right;
+  margin: 0 auto;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h2, h3 {
+  font-family: 'Prompt', sans-serif;
+  color: #00797C;
+  opacity: 0.6;
+  font-weight: bolder;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navigation li, ul.contact li {
+  display: inline;
+}
+
+ul.navigation li {
+  padding: 5%;
+  font-family: 'Prompt', sans-serif;
+  color: #259490;
+}
+
+header {
+  margin-top: 75px;
+  height: 125px;
+}
+
+.portfolio {
+  margin-bottom: 10%;
+}
+
+.portfolio img {
+  width: 80%;
+}
+
+ul.tech, p.projectDescription {
+  margin-left: 10%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 80%;
+  text-align: left;
+}
+
+ul.tech img {
+  width: 25px;
+}
+
+ul.tech li {
+  display: inline;
+}
+
+ul.projectLink {
+  margin-left: 10%;
+  text-align: left;
+}
+
+ul.projectLink li {
+  display: inline;
+}
+
+ul.projectLink li.repo::after {
+  content: "|";
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #00797C
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #009F92;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #009F92;
+}
+
+footer {
+  height: 75px;
+}
+
+footer img {
+  height: 50px;
+}
+
+ul.contact li {
+  padding: 15px;
+}
+
+@media (min-width: 1024px) {
   nav {
-    background-color: gray;
-    height: 50px;
-    width: 100%;
+    width: 300px;
+    height: 100%;
     position: fixed;
-    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+  hr {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: relative;
+    left: -250px;
+    top: 0px;
+    width: 175%;
   }
-  
-  ul.navigation li, ul.contact li {
-    display: inline;
+
+  header, .aboutMe, .portfolio, footer {
+    margin-right: 300px;
   }
-  
+
+  ul.navigation {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  ul.navigation li {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 16px;
+  }
+
   header {
-    margin-top: 75px;
-    height: 300px;
+  margin-top: 75px;
+  height: 300px;
   }
-  
-  .aboutMe {
-    height: 200px;
-    background-color: gainsboro;
+
+  h1 {
+  position: relative;
+  top: 100px;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 56px;
   }
-  
-  .portfolio {
-    height: 700px;
-    background-color: rgb(151, 151, 151);
+
+  h2 {
+    font-size: 28px;
+    padding-right: 5%;
   }
-  
-  footer {
-    height: 75px;
-    background-color: rgba(0, 0, 0, 0.651);
+
+  p.bio {
+    margin-left: 20%;
+    padding-right: 5%;
   }
-  
-  @media (min-width: 1024px) {
-    nav {
-      width: 250px;
-      height: 100%;
-      position: fixed;
-      right: 0;
-    }
-  
-    header, .aboutMe, .portfolio, .footer {
-      margin-right: 250px;
-    }
-  
-    ul.navigation li {
-      display: block;
-    }
+
+  .portfolio img {
+  width: 80%;
+  }
